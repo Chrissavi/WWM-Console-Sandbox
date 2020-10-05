@@ -1,13 +1,19 @@
 #pragma once
 
 #include <iostream>
+#include "Viewer.h"
 //#include <string>
 using namespace std;
 
 // -- VARIABLES ---
 
 static int QuestionCounter;
-// string CurrentCorrectAnswer;
+static string CurrentQuestion;
+static string AnswerA;
+static string AnswerB;
+static string AnswerC;
+static string AnswerD;
+static string CurrentCorrectAnswer;
 static string SelectedAnswer;
 
 // Hardcoded Question Data: {Level, Question, Four possible answers to display, correct answer (must match exact one of the four possible)}
@@ -32,8 +38,11 @@ static string Question[15][7]=
 	}; 
 
 // -- FUNCTIONS --
-// void CheckCorrectAnswer();
-void QuestionGrabber();
+
+void Run();
+void CheckCorrectAnswer();
+void QuestionConstructor();
+int SetNextQuestion();
 // void SubmitAnswer();
 // void ChangeMind();
 // void EndGame();

@@ -3,34 +3,46 @@
 using namespace std;
 
 
+void Run()
+{
+	ShowWelcomeScreen();
+}
 
-/*
 void CheckCorrectAnswer()
 {
 	if (SelectedAnswer == CurrentCorrectAnswer)
 	{
-		QuestionGrabber();
+		QuestionConstructor();
 	}
 	else
 	{
-		EndGame();
+		//EndGame();
 	}
 		
 }
-*/
-void QuestionGrabber()
+int SetNextQuestion(int i)
+{
+	switch (i)
+	{
+	case(1):  
+		break;
+	}
+}
+
+void QuestionConstructor()
 {
 	SelectedAnswer = "none";
-	QuestionCounter = 0;
+	// QuestionCounter = 0;
 	
 	switch (QuestionCounter)
 	{
-	case(0): cout << Question[0][1] << endl;
-		cout << "answer a: " << Question[0][2] << endl;
-		cout << "answer b: " << Question[0][3] << endl;
-		cout << "answer c: " << Question[0][4] << endl;
-		cout << "answer d: " << Question[0][5] << endl;
-		cout << "answer correct: " << Question[0][6] << endl;
+	case(0): CurrentQuestion = Question[0][1];
+		AnswerA = Question[0][2];
+		AnswerB = Question[0][3];
+		AnswerC = Question[0][4];
+		AnswerD = Question[0][5];
+		CurrentCorrectAnswer = Question[0][6];
+		PresentQuestion();
 		break;
 		/*
 	case(1):
