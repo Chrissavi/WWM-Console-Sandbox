@@ -1,6 +1,7 @@
-//#include <iostream>
+#include <iostream>
 #include "Controller.h"
-//#include "main.h"
+#include "Viewer.h"
+
 
 int main()
 {
