@@ -42,7 +42,7 @@ static string Question[15][7]=
 void Run();
 void CheckCorrectAnswer();
 void QuestionConstructor();
-int SetNextQuestion();
+int SetNextQuestion(int i);
 // void SubmitAnswer();
 // void ChangeMind();
 // void EndGame();

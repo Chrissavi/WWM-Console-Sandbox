@@ -4,16 +4,5 @@
 
 int main()
 {
-	QuestionGrabber();
-
-	//system("pause");
+	Run();
 }
-/*
-void Run()
-{
-	ClearEverything();
-}
-void ClearEverything()
-{
-
-}*/

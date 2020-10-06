@@ -27,6 +27,7 @@ int SetNextQuestion(int i)
 	case(1):  
 		break;
 	}
+	return 0;
 }
 
 void QuestionConstructor()
@@ -34,7 +35,7 @@ void QuestionConstructor()
 	SelectedAnswer = "none";
 	// QuestionCounter = 0;
 	
-	switch (QuestionCounter)
+	switch(QuestionCounter)
 	{
 	case(0): CurrentQuestion = Question[0][1];
 		AnswerA = Question[0][2];
@@ -76,6 +77,7 @@ void QuestionConstructor()
 	default: cout << "Sorry - no more questions possible!" << endl;
 	}
 }
+
 /*
 void SubmitAnswer()
 {
