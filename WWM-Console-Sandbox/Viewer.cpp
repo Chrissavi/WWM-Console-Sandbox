@@ -7,21 +7,27 @@ using namespace std;
 void PresentQuestion()
 {
 	system("cls");
-	cout << "================================================================" << endl;
-	cout << "||                                       Money: " << CurrentMoney << "             ||" << endl;
-	cout << "||                  Question 1:                               ||" << endl;
-	cout << "||                 "<<CurrentQuestion<< "                    ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "||     You'll be presented with a total of 15 questions       ||" << endl;
-	cout << "||    If you solve them all correctly, you'll win 1M gold     ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "||               Press [H] to display the rules               ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "||                Press [S] to start the quiz                 ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "||                                                            ||" << endl;
-	cout << "================================================================" << endl;
+	cout << "======================================================================" << endl;
+	cout << "||                                       Money: " << CurrentMoney << "             " << endl;
+	cout << "||                         Question 1:                        " << endl;
+	cout << "||                                     " << endl;
+	cout << "||                 " << CurrentQuestion << "                                           " << endl;
+	cout << "||                                                            " << endl;
+	cout << "||            " << endl;
+	cout << "||         " << endl;
+	cout << "||                                                            " << endl;
+	cout << "||                              " << endl;
+	cout << "||--------------------------------------------------------------------" << endl;
+	cout << "||     "<<AnswerA<<"                            " << endl;
+	cout << "||-----------------------------||-------------------------------------" << endl;
+	cout << "||" << AnswerB << "                             ||                               " << endl;
+	cout << "||" << AnswerC << "||                               " << endl;
+	cout << "||" << AnswerD << "                                                            " << endl;
+	cout << "======================================================================" << endl;
+	cout << "||            Please select your answer and press either            " << endl;
+	cout << "||                  [A],[B],[C] or [D] and [Enter]                                              " << endl;
+	cout << "======================================================================" << endl;
+	system("pause");
 }
 
 
