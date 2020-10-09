@@ -28,4 +28,4 @@ void Run();
 void EndGame();
 void CheckCorrectAnswer();
 void QuestionConstructor();
-
+void Won();

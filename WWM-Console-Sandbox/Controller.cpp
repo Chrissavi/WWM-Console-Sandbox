@@ -25,14 +25,15 @@ string Question[15][7] =
 	{ "9", "How many stars does the EU flag have?", "8", "10", "12", "16", "12" },//16
 	{ "10", "What is the name of Elon Musk's Space Program?", "Space X", "Roskosmos", "NASA", "ESA", "Space X" },//32
 	{ "11", "What is the highest mountain in Africa called?", "Fuji", "Mont Blanc", "Everest", "Kilimanjaro", "Kilimanjaro" },//64
-	{ "12", "What is the capital of Egypt?", "Berlin", "Cairo", "Athens", "Madrid", "Cairo" },//125
-	{ "13", "What is the capital of Egypt?", "Berlin", "Cairo", "Athens", "Madrid", "Cairo" },//2
-	{ "14", "What is the capital of Egypt?", "Berlin", "Cairo", "Athens", "Madrid", "Cairo" },//5
-	{ "15", "What is the capital of Egypt?", "Berlin", "Cairo", "Athens", "Madrid", "Cairo" } //1
+	{ "12", "What is the currency in the United Kingdom called?", "Euro", "Rupee", "Pound", "Dollar", "Pound" },//125
+	{ "13", "What animal is typically associated with Australia?", "Elk", "Lion", "Zebra", "Kangaroo", "Kangaroo" },//2
+	{ "14", "In which country is the Holy Muslim Town 'Mecca' located?", "Jordan", "Saudi Arabia", "Algiers", "Yemen", "saudi Arabia" },//5
+	{ "15", "Who is the founder of Amazon?", "Jeff Bezos", "Steve Jobs", "Bill Gates", "Elon Musk", "Jeff Bezos" } //1
 	};
 
 void Run()
 {
+	CurrentMoney = 0;
 	QuestionCounter = 0;
 	SelectedAnswer = "none";
 	ShowWelcomeScreen();
@@ -42,8 +43,16 @@ void CheckCorrectAnswer()
 {
 	if (SelectedAnswer == CurrentCorrectAnswer)
 	{
-		QuestionCounter++;
-		QuestionConstructor();
+		if (QuestionNumber != "15")
+		{
+			QuestionCounter++;
+			QuestionConstructor();
+		}
+		else
+		{
+			Won();
+		}
+		
 	}
 	else
 	{
@@ -71,6 +80,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(2): 
+		CurrentMoney = 50;
 		QuestionNumber = Question[1][0];
 		CurrentQuestion = Question[1][1];
 		AnswerA = Question[1][2];
@@ -81,6 +91,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(3): 
+		CurrentMoney = 100;
 		QuestionNumber = Question[2][0];
 		CurrentQuestion = Question[2][1];
 		AnswerA = Question[2][2];
@@ -90,7 +101,8 @@ void QuestionConstructor()
 		CurrentCorrectAnswer = Question[2][6];
 		PresentQuestion();
 		break;
-	case(4): 
+	case(4):
+		CurrentMoney = 250;
 		QuestionNumber = Question[3][0];
 		CurrentQuestion = Question[3][1];
 		AnswerA = Question[3][2];
@@ -100,7 +112,8 @@ void QuestionConstructor()
 		CurrentCorrectAnswer = Question[3][6];
 		PresentQuestion();
 		break;
-	case(5): 
+	case(5):
+		CurrentMoney = 500;
 		QuestionNumber = Question[4][0];
 		CurrentQuestion = Question[4][1];
 		AnswerA = Question[4][2];
@@ -111,6 +124,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(6): 
+		CurrentMoney = 1000;
 		QuestionNumber = Question[5][0];
 		CurrentQuestion = Question[5][1];
 		AnswerA = Question[5][2];
@@ -121,6 +135,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(7): 
+		CurrentMoney = 2000;
 		QuestionNumber = Question[6][0];
 		CurrentQuestion = Question[6][1];
 		AnswerA = Question[6][2];
@@ -131,6 +146,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(8): 
+		CurrentMoney = 4000;
 		QuestionNumber = Question[7][0];
 		CurrentQuestion = Question[7][1];
 		AnswerA = Question[7][2];
@@ -141,6 +157,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(9): 
+		CurrentMoney = 8000;
 		QuestionNumber = Question[8][0];
 		CurrentQuestion = Question[8][1];
 		AnswerA = Question[8][2];
@@ -151,6 +168,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(10): 
+		CurrentMoney = 16000;
 		QuestionNumber = Question[9][0];
 		CurrentQuestion = Question[9][1];
 		AnswerA = Question[9][2];
@@ -161,6 +179,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(11): 
+		CurrentMoney = 32000;
 		QuestionNumber = Question[10][0];
 		CurrentQuestion = Question[10][1];
 		AnswerA = Question[10][2];
@@ -171,6 +190,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(12): 
+		CurrentMoney = 64000;
 		QuestionNumber = Question[11][0];
 		CurrentQuestion = Question[11][1];
 		AnswerA = Question[11][2];
@@ -181,6 +201,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(13): 
+		CurrentMoney = 125000;
 		QuestionNumber = Question[12][0];
 		CurrentQuestion = Question[12][1];
 		AnswerA = Question[12][2];
@@ -191,6 +212,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(14): 
+		CurrentMoney = 250000;
 		QuestionNumber = Question[13][0];
 		CurrentQuestion = Question[13][1];
 		AnswerA = Question[13][2];
@@ -201,6 +223,7 @@ void QuestionConstructor()
 		PresentQuestion();
 		break;
 	case(15): 
+		CurrentMoney = 500000;
 		QuestionNumber = Question[14][0];
 		CurrentQuestion = Question[14][1];
 		AnswerA = Question[14][2];
@@ -218,5 +241,9 @@ void EndGame()
 	cout << "Sorry, the answer is incorrect, you have lost" << endl;
 	system("pause");
 	Run();
+}
+void Won()
+{
+	ShowWinScreen();
 }
 

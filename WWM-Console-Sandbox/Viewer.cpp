@@ -8,7 +8,7 @@ void PresentQuestion()
 {
 	system("cls");
 	cout << "======================================================================" << endl;
-	cout << "||                                       Money:   " << CurrentMoney << endl;
+	cout << "||                                       Money:   " << CurrentMoney << " Gold" << endl;
 	cout << "||                              Question "<< QuestionNumber <<":      " << endl;
 	cout << "||" << endl;
 	cout << "||" << CurrentQuestion << endl;
@@ -113,9 +113,28 @@ void ShowWelcomeScreen()
 	}
 	else
 	{
-		cout << "Please press either [H] or [S]" << endl;
-		system("pause");
 		ShowWelcomeScreen();
 	}
  
+}
+void ShowWinScreen()
+{
+
+	system("cls");
+	cout << "================================================================" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||               C O N G R A T U L A T I O N S                ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||                         YOU WON                            ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||                1   M I L L I O N   G O L D                 ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||                           BY                               ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||                ANSWERING ALL 15 QUESTIONS                  ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "||                         CORRECT                            ||" << endl;
+	cout << "||                                                            ||" << endl;
+	cout << "================================================================" << endl;
+	system("pause");
 }

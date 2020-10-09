@@ -3,3 +3,4 @@
 
 void PresentQuestion();
 void ShowWelcomeScreen();
+void ShowWinScreen();
