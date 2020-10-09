@@ -8,10 +8,10 @@ void PresentQuestion()
 {
 	system("cls");
 	cout << "======================================================================" << endl;
-	cout << "||                                       Money: " << CurrentMoney << endl;
+	cout << "||                                       Money:   " << CurrentMoney << endl;
 	cout << "||                              Question 1:                           " << endl;
 	cout << "||" << endl;
-	cout << "||       " << CurrentQuestion << endl;
+	cout << "||" << CurrentQuestion << endl;
 	cout << "||" << endl;
 	cout << "||" << endl;
 	cout << "||" << endl;
@@ -29,10 +29,38 @@ void PresentQuestion()
 	cout << "||            Please select your answer and press either              " << endl;
 	cout << "||                  [A],[B],[C] or [D] and [Enter]                    " << endl;
 	cout << "======================================================================" << endl;
+	
+	char chosenAnswer = cin.get();
+	
+	if (chosenAnswer == 'a' || chosenAnswer == 'b' || chosenAnswer == 'c' || chosenAnswer == 'd')
+	{
+		switch (chosenAnswer)
+		{
+		case('a'):
+			break;
+		case('b'):
+			break;
+		case('c'):
+			break;
+		case('d'):
+			break;
+		default: cout << "Please select your answer and press either [A],[B],[C] or [D] and [Enter] !!" << endl;
+		}
+		
+	}
+	else
+	{
+		PresentQuestion();
+	}
+	
+		
+
+	
 	system("pause");
 }
 
 
+/* This is the first Screen, the user sees: */
 void ShowWelcomeScreen()
 {
 	system("cls");
@@ -54,6 +82,7 @@ void ShowWelcomeScreen()
 
 	char key = cin.get();
 
+	/*This will evaluate if either Help-Screen to display or start the quiz*/
 	if (key == 'h')
 	{
 		system("cls");
@@ -66,12 +95,14 @@ void ShowWelcomeScreen()
 		cout << "||     if any further question has a wrong answer.            ||" << endl;
 		cout << "||    When you answer a question wrong, the game is over.     ||" << endl;
 		cout << "||                                                            ||" << endl;
-		cout << "||               Press [K] to go back to MAIN MENU            ||" << endl;
+		cout << "||           Press any key to go back to MAIN MENU            ||" << endl;
 		cout << "||                                                            ||" << endl;
 		cout << "||                                                            ||" << endl;
 		cout << "||                                                            ||" << endl;
 		cout << "||                                                            ||" << endl;
 		cout << "================================================================" << endl;
+		system("pause");
+		ShowWelcomeScreen();
 	}
 	else if (key == 's')
 	{
@@ -86,12 +117,5 @@ void ShowWelcomeScreen()
 		system("pause");
 		ShowWelcomeScreen();
 	}
-
-
-
-
-
-	// This is the first screen, the user will see
-	// Press button to start Quiz
-	// Start Button sends Signal to SetNextQuestion with integer of 0 and the Qestion queue begins. 
+ 
 }
