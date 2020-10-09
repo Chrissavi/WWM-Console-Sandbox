@@ -9,7 +9,7 @@ void PresentQuestion()
 	system("cls");
 	cout << "======================================================================" << endl;
 	cout << "||                                       Money:   " << CurrentMoney << endl;
-	cout << "||                              Question 1:                           " << endl;
+	cout << "||                              Question "<< QuestionNumber <<":      " << endl;
 	cout << "||" << endl;
 	cout << "||" << CurrentQuestion << endl;
 	cout << "||" << endl;
@@ -36,15 +36,18 @@ void PresentQuestion()
 	{
 		switch (chosenAnswer)
 		{
-		case('a'):
+		case('a'): SelectedAnswer = AnswerA;
+			CheckCorrectAnswer();
 			break;
-		case('b'):
+		case('b'): SelectedAnswer = AnswerB;
+			CheckCorrectAnswer();
 			break;
-		case('c'):
+		case('c'): SelectedAnswer = AnswerC;
+			CheckCorrectAnswer();
 			break;
-		case('d'):
+		case('d'): SelectedAnswer = AnswerD;
+			CheckCorrectAnswer();
 			break;
-		default: cout << "Please select your answer and press either [A],[B],[C] or [D] and [Enter] !!" << endl;
 		}
 		
 	}
@@ -52,9 +55,6 @@ void PresentQuestion()
 	{
 		PresentQuestion();
 	}
-	
-		
-
 	
 	system("pause");
 }

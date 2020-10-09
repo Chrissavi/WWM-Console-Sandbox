@@ -9,6 +9,7 @@ using namespace std;
 
 extern int QuestionCounter;
 extern int CurrentMoney;
+extern string QuestionNumber;
 extern string CurrentQuestion;
 extern string AnswerA;
 extern string AnswerB;
@@ -24,9 +25,7 @@ extern string Question[15][7];
 // -- FUNCTIONS --
 
 void Run();
+void EndGame();
 void CheckCorrectAnswer();
 void QuestionConstructor();
-int SetNextQuestion(int i);
-// void SubmitAnswer();
-// void ChangeMind();
-// void EndGame();
+
