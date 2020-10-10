@@ -8,6 +8,6 @@ Little Console-Quiz with 15 hard-coded trivial questions created as a base contr
 
 Enjoy.
 
-[Roadmap](https://github.com/Chrissavi/WWM-Console-Sandbox/RoadmapWWM.png)
+![Roadmap](RoadmapWWM.png)
 
 
